@@ -37,27 +37,67 @@
   <!-- ========================================================================
        Navigation Bar
        ======================================================================== -->
-  <nav class="site-nav">
+  <nav class="site-nav" id="site-nav">
     <div class="nav-inner">
-      <a href="#hero" class="nav-brand">
+      <a href="#hero" class="nav-brand" aria-label="Back to top">
         <span class="nav-brand-bracket">[</span><span>notyourpan</span><span class="nav-brand-bracket">]</span>
       </a>
 
-      <ul class="nav-links">
-        <li><a href="#projects" class="nav-link">~/projects</a></li>
-        <li><a href="#capabilities" class="nav-link">~/capabilities</a></li>
-        <li><a href="#background" class="nav-link">~/background</a></li>
-        <li><a href="#connect" class="nav-link">~/connect</a></li>
+      <!-- Desktop Navigation Links -->
+      <ul class="nav-links" id="desktop-nav-links">
+        <li><a href="#hero" class="nav-link active"><span class="nav-link-prefix">~/</span><span>home</span></a></li>
+        <li><a href="#projects" class="nav-link"><span class="nav-link-prefix">~/</span><span>projects</span></a></li>
+        <li><a href="#capabilities" class="nav-link"><span class="nav-link-prefix">~/</span><span>capabilities</span></a></li>
+        <li><a href="#background" class="nav-link"><span class="nav-link-prefix">~/</span><span>background</span></a></li>
+        <li><a href="#connect" class="nav-link"><span class="nav-link-prefix">~/</span><span>connect</span></a></li>
       </ul>
 
+      <!-- Desktop Actions -->
       <div class="nav-actions">
-        <a href="https://github.com/NotYourPan" target="_blank" rel="noopener noreferrer" class="nav-btn">
+        <a href="https://github.com/NotYourPan" target="_blank" rel="noopener noreferrer" class="nav-btn" aria-label="Source code on GitHub">
           <i class="bi bi-github"></i>
           <span>src_code</span>
         </a>
       </div>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-mobile-menu">
+        <span class="nav-toggle-icon">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </span>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="nav-mobile-menu" id="nav-mobile-menu" aria-hidden="true">
+      <div class="nav-mobile-inner">
+        <div class="nav-mobile-status">
+          <span class="terminal-prompt">&gt;_</span>
+          <span class="terminal-path">system_nav.sh</span>
+          <span class="nav-mobile-badge">[ONLINE]</span>
+        </div>
+        <ul class="nav-mobile-links" id="mobile-nav-links">
+          <li><a href="#hero" class="nav-mobile-link active"><span class="nav-mobile-prefix">&gt;</span><span>~/home</span></a></li>
+          <li><a href="#projects" class="nav-mobile-link"><span class="nav-mobile-prefix">&gt;</span><span>~/projects</span></a></li>
+          <li><a href="#capabilities" class="nav-mobile-link"><span class="nav-mobile-prefix">&gt;</span><span>~/capabilities</span></a></li>
+          <li><a href="#background" class="nav-mobile-link"><span class="nav-mobile-prefix">&gt;</span><span>~/background</span></a></li>
+          <li><a href="#connect" class="nav-mobile-link"><span class="nav-mobile-prefix">&gt;</span><span>~/connect</span></a></li>
+        </ul>
+        <div class="nav-mobile-actions">
+          <a href="https://github.com/NotYourPan" target="_blank" rel="noopener noreferrer" class="nav-btn nav-btn-full">
+            <i class="bi bi-github"></i>
+            <span>src_code // github</span>
+            <i class="bi bi-arrow-up-right nav-btn-arrow"></i>
+          </a>
+        </div>
+      </div>
     </div>
   </nav>
+
+  <!-- Mobile Backdrop Overlay -->
+  <div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
 
   <main class="container">
 
@@ -105,7 +145,7 @@
         <div class="section-kicker">[ 01 // REPOSITORY_SHOWCASE ]</div>
         <h2 class="section-title scramble-target" data-original="Selected Projects">Selected Projects</h2>
         <p class="section-description">
-          A showcase of functional web applications, technical charting setups, and decentralized Web3 testbeds.
+          A showcase of functional web applications, technical engineering systems, and certified proprietary trading milestones.
         </p>
       </div>
 
@@ -169,116 +209,147 @@
           </div>
         </article>
 
-        <!-- Project 3: Pan Capital -->
+        <!-- Project 3: Alpha Futures Prop Trader -->
         <article class="spotlight-card craft-card">
           <div class="card-media">
-            <img src="assets/img/portfolio/apk3.png" alt="Pan Capital Web Portal" loading="lazy">
+            <img src="assets/img/portfolio/funded_alpha.webp" alt="Alpha Futures Proprietary Trader Certificate" loading="lazy">
           </div>
           <div class="card-content">
             <div class="card-top-row">
-              <h3 class="card-title">Pan Capital Web Portal</h3>
+              <h3 class="card-title">Alpha Futures &bull; Prop Trader</h3>
               <button class="craft-modal-trigger card-arrow" 
-                      data-img="assets/img/portfolio/apk3.png"
-                      data-title="Pan Capital Web Portal"
-                      data-desc="Brand and portfolio web portal for Pan Capital. Performance-first layout, custom CSS architecture, and responsive styling."
+                      data-img="assets/img/portfolio/funded_alpha.webp"
+                      data-title="Alpha Futures — Proprietary Trader"
+                      data-desc="Official Certificate of Achievement presented by Alpha Futures for successfully completing the evaluation and demonstrating disciplined risk and capital management as a Proprietary Trader."
                       style="background:none; border:none; cursor:pointer;"
                       aria-label="View preview">
                 &#x2197;
               </button>
             </div>
             <p class="card-summary">
-              Brand web portal built with semantic HTML5, custom responsive stylesheets, and clean layout hierarchy.
+              Completed evaluation objectives with strict risk limits and drawdown parameters, officially recognized as an Alpha Futures Proprietary Trader.
             </p>
             <div class="card-pills">
-              <span class="pill">HTML5</span>
-              <span class="pill">CSS3</span>
-              <span class="pill">JavaScript</span>
-              <span class="pill">Responsive</span>
+              <span class="pill">Alpha Futures</span>
+              <span class="pill">Prop Trader</span>
+              <span class="pill">Capital Management</span>
+              <span class="pill">Futures</span>
             </div>
           </div>
         </article>
 
-        <!-- Project 4: Trading -->
+        <!-- Project 4: AquaFunded Evaluation Passed -->
         <article class="spotlight-card craft-card">
           <div class="card-media">
-            <img src="assets/img/portfolio/trade1.jpg" alt="Technical Market Analysis" loading="lazy">
+            <img src="assets/img/portfolio/pass_certificate.webp" alt="AquaFunded Certificate of Achievement" loading="lazy">
           </div>
           <div class="card-content">
             <div class="card-top-row">
-              <h3 class="card-title">Market Structure &amp; Charting</h3>
+              <h3 class="card-title">AquaFunded &bull; Evaluation Passed</h3>
               <button class="craft-modal-trigger card-arrow" 
-                      data-img="assets/img/portfolio/trade1.jpg"
-                      data-title="Market Structure & Charting"
-                      data-desc="Technical analysis setups analyzing support/resistance, market liquidity zones, and disciplined execution."
+                      data-img="assets/img/portfolio/pass_certificate.webp"
+                      data-title="AquaFunded — Certificate of Achievement"
+                      data-desc="Certificate of Achievement from AquaFunded validating completion of evaluation trading objectives and profitable execution with quality money management."
                       style="background:none; border:none; cursor:pointer;"
                       aria-label="View preview">
                 &#x2197;
               </button>
             </div>
             <p class="card-summary">
-              Technical charting analysis focusing on support and resistance reaction zones, market structure, and liquidity setups in crypto and FX.
+              Achieved evaluation target milestones with disciplined money management, strict risk controls, and consistency parameters.
             </p>
             <div class="card-pills">
-              <span class="pill">Price Action</span>
-              <span class="pill">Technical Analysis</span>
-              <span class="pill">Risk Management</span>
+              <span class="pill">AquaFunded</span>
+              <span class="pill">Evaluation Passed</span>
+              <span class="pill">Risk Control</span>
+              <span class="pill">Funded Account</span>
             </div>
           </div>
         </article>
 
-        <!-- Project 5: Trading Strategy -->
+        <!-- Project 5: FFF Premier 50K Intraday Challenge (982018) -->
         <article class="spotlight-card craft-card">
           <div class="card-media">
-            <img src="assets/img/portfolio/trade2.jpg" alt="Price Action Strategy Execution" loading="lazy">
+            <img src="assets/img/portfolio/FFF982018_certificate.webp" alt="Funded Futures Family 50K Intraday Challenge Certificate" loading="lazy">
           </div>
           <div class="card-content">
             <div class="card-top-row">
-              <h3 class="card-title">Price Action &amp; Risk Protocol</h3>
+              <h3 class="card-title">FFF &bull; Premier 50K Intraday</h3>
               <button class="craft-modal-trigger card-arrow" 
-                      data-img="assets/img/portfolio/trade2.jpg"
-                      data-title="Price Action Strategy Execution"
-                      data-desc="Structured trade execution rules, controlled leverage sizing, and disciplined risk-to-reward ratios."
+                      data-img="assets/img/portfolio/FFF982018_certificate.webp"
+                      data-title="Funded Futures Family — Premier 50K Intraday"
+                      data-desc="Certificate of Funding presented by Funded Futures Family for passing the Premier 50K Intraday Trading Challenge under structured risk constraints."
                       style="background:none; border:none; cursor:pointer;"
                       aria-label="View preview">
                 &#x2197;
               </button>
             </div>
             <p class="card-summary">
-              Strict risk-to-reward strategy execution with trade journaling and drawdown mitigation in volatile market environments.
+              Awarded Certificate of Funding on the Premier 50K Intraday Challenge with disciplined execution and strict risk-to-reward ratios.
             </p>
             <div class="card-pills">
-              <span class="pill">Risk-to-Reward</span>
+              <span class="pill">FFF</span>
+              <span class="pill">50K Challenge</span>
+              <span class="pill">Futures</span>
+              <span class="pill">Intraday Execution</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 6: FFF 50K Trading Challenge (916445) -->
+        <article class="spotlight-card craft-card">
+          <div class="card-media">
+            <img src="assets/img/portfolio/FFF916445_certificate.webp" alt="Funded Futures Family 50K Trading Challenge Certificate" loading="lazy">
+          </div>
+          <div class="card-content">
+            <div class="card-top-row">
+              <h3 class="card-title">FFF &bull; 50K Challenge</h3>
+              <button class="craft-modal-trigger card-arrow" 
+                      data-img="assets/img/portfolio/FFF916445_certificate.webp"
+                      data-title="Funded Futures Family — 50K Trading Challenge"
+                      data-desc="Certificate of Funding presented by Funded Futures Family validating achievement in the Premier 50K Trading Challenge."
+                      style="background:none; border:none; cursor:pointer;"
+                      aria-label="View preview">
+                &#x2197;
+              </button>
+            </div>
+            <p class="card-summary">
+              Verified Certificate of Funding upon passing milestones in the Funded Futures Family Premier 50K evaluation program.
+            </p>
+            <div class="card-pills">
+              <span class="pill">FFF</span>
+              <span class="pill">50K Premier</span>
+              <span class="pill">Risk Protocol</span>
+              <span class="pill">Drawdown Control</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 7: FFF Premier 50K Intraday Challenge (518524) -->
+        <article class="spotlight-card craft-card">
+          <div class="card-media">
+            <img src="assets/img/portfolio/FFF518524_certificate.webp" alt="Funded Futures Family 50K Intraday Challenge Certificate" loading="lazy">
+          </div>
+          <div class="card-content">
+            <div class="card-top-row">
+              <h3 class="card-title">FFF &bull; Premier 50K Funding</h3>
+              <button class="craft-modal-trigger card-arrow" 
+                      data-img="assets/img/portfolio/FFF518524_certificate.webp"
+                      data-title="Funded Futures Family — Premier 50K Intraday"
+                      data-desc="Certificate of Funding awarded for disciplined execution in the Premier 50K Intraday Trading Challenge."
+                      style="background:none; border:none; cursor:pointer;"
+                      aria-label="View preview">
+                &#x2197;
+              </button>
+            </div>
+            <p class="card-summary">
+              Successful intraday evaluation completion adhering to loss limits, target objectives, and structured trade journaling.
+            </p>
+            <div class="card-pills">
+              <span class="pill">FFF</span>
+              <span class="pill">Intraday Challenge</span>
               <span class="pill">Position Sizing</span>
-              <span class="pill">Journaling</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project 6: Web3 Protocol -->
-        <article class="spotlight-card craft-card">
-          <div class="card-media">
-            <img src="assets/img/portfolio/web3-2.jpg" alt="dApp & Smart Contract Testing" loading="lazy">
-          </div>
-          <div class="card-content">
-            <div class="card-top-row">
-              <h3 class="card-title">dApp &amp; Smart Contract Testing</h3>
-              <button class="craft-modal-trigger card-arrow" 
-                      data-img="assets/img/portfolio/web3-2.jpg"
-                      data-title="dApp & Smart Contract Testing"
-                      data-desc="Interaction testing with on-chain protocols, smart contracts, and wallet transaction lifecycle on EVM and Solana."
-                      style="background:none; border:none; cursor:pointer;"
-                      aria-label="View preview">
-                &#x2197;
-              </button>
-            </div>
-            <p class="card-summary">
-              Interaction testing with decentralized applications, wallet connection flows, and smart contract execution on EVM and Solana.
-            </p>
-            <div class="card-pills">
-              <span class="pill">Solana</span>
-              <span class="pill">EVM</span>
-              <span class="pill">Smart Contracts</span>
-              <span class="pill">Web3.js</span>
+              <span class="pill">Risk-to-Reward</span>
             </div>
           </div>
         </article>
@@ -648,7 +719,111 @@
         });
       }
 
-      // 5. Current Year
+      // 5. Responsive Mobile Navigation Engine
+      const siteNav = document.getElementById('site-nav');
+      const navToggle = document.getElementById('nav-toggle');
+      const navMobileMenu = document.getElementById('nav-mobile-menu');
+      const navBackdrop = document.getElementById('nav-backdrop');
+      const mobileNavLinks = document.querySelectorAll('.nav-mobile-link');
+      const desktopNavLinks = document.querySelectorAll('.nav-links .nav-link');
+
+      const openMobileMenu = () => {
+        if (!siteNav) return;
+        siteNav.classList.add('menu-open');
+        navToggle.classList.add('active');
+        navToggle.setAttribute('aria-expanded', 'true');
+        navMobileMenu.classList.add('open');
+        navMobileMenu.setAttribute('aria-hidden', 'false');
+        navBackdrop.classList.add('active');
+        navBackdrop.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('mobile-menu-locked');
+      };
+
+      const closeMobileMenu = () => {
+        if (!siteNav) return;
+        siteNav.classList.remove('menu-open');
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navMobileMenu.classList.remove('open');
+        navMobileMenu.setAttribute('aria-hidden', 'true');
+        navBackdrop.classList.remove('active');
+        navBackdrop.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('mobile-menu-locked');
+      };
+
+      if (navToggle) {
+        navToggle.addEventListener('click', () => {
+          const isOpen = navMobileMenu && navMobileMenu.classList.contains('open');
+          if (isOpen) {
+            closeMobileMenu();
+          } else {
+            openMobileMenu();
+          }
+        });
+      }
+
+      if (navBackdrop) {
+        navBackdrop.addEventListener('click', closeMobileMenu);
+      }
+
+      // Close mobile menu when clicking any mobile nav link
+      mobileNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          closeMobileMenu();
+        });
+      });
+
+      // Close mobile menu on Escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navMobileMenu && navMobileMenu.classList.contains('open')) {
+          closeMobileMenu();
+          if (navToggle) navToggle.focus();
+        }
+      });
+
+      // 6. Navigation Scrollspy (Active section highlight)
+      const sections = document.querySelectorAll('section[id]');
+      const updateActiveNav = () => {
+        const scrollPosition = window.scrollY + 120;
+        let currentSectionId = '';
+
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
+          if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            currentSectionId = section.getAttribute('id');
+          }
+        });
+
+        if (!currentSectionId && window.scrollY < 200) {
+          currentSectionId = 'hero';
+        }
+
+        if (currentSectionId) {
+          desktopNavLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === `#${currentSectionId}`) {
+              link.classList.add('active');
+            } else {
+              link.classList.remove('active');
+            }
+          });
+
+          mobileNavLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === `#${currentSectionId}`) {
+              link.classList.add('active');
+            } else {
+              link.classList.remove('active');
+            }
+          });
+        }
+      };
+
+      window.addEventListener('scroll', updateActiveNav, { passive: true });
+      updateActiveNav();
+
+      // 7. Current Year
       const yearEl = document.getElementById('current-year');
       if (yearEl) yearEl.textContent = new Date().getFullYear();
     });
